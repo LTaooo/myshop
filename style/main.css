@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.head{
+    background-color: blue;
+    width: 685px;
+    height: 60px;
+    margin: 0px auto;
+
+}
+.handle{
+    height: 30px;
+    width: 300px;
+    background-color: yellow;
+    margin: 10px auto;
+}
+.handle .cart,
+.handle .logout{
+    height: 30px;
+    width: 100px;
+    background-color: red;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+}
+.content{
+    width: 85%;
+    background-color: aquamarine;
+    border: solid 1px;
+    height: auto;
+
+    margin: 20px auto;
+}
+body ul{
+    margin: 0px;
+    padding: 0px;
+}
+a,
+ul{
+    list-style: none;
+    text-decoration: none;
+}
+.head ul li{
+    height: 60px;
+    width: 110px;
+    margin-left: 5px;
+    background-color:slategrey;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+}
+.head ul li:first-child{
+    margin-left: 0px;
+    border-top-left-radius:10px ;
+}
+.head ul li:last-child{
+    border-top-right-radius: 10px;
+}
+.head ul li a{
+    color: aliceblue;
+    display: block;
+    text-decoration: none;
+}
+div ul li a:hover{
+    color: black;
+}
+.content .test{
+    height: 400px;
+    width: 300px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    border: 1px solid
+}
+.content .pic{
+    height: 250px;
+    width: 300px;
+}
+.content .message{
+    height: 150px;
+    width: 300px;
+}
+.content .message .title{
+    height: 100px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: rgb(204, 66, 61);
+}
+.content .message .title .kucun{
+    height: 30px;
+    width: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 210px;
+    top: 60px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(238, 161, 20);
+}
+.content .message .ifo{
+    height: 50px;
+    width: 300px;
+}
+.content .message .ifo .price{
+    height: 50px;
+    width: 150px;
+    float: left;
+    line-height: 50px;
+    background: rgba(114, 92, 92, 0.5);
+    color: red;
+    text-align: center;
+}
+.content .message .ifo .do{
+    height: 50px;
+    width: 150px;
+    position: relative;
+    float:left;
+    background: rgba(114, 25, 25, 0.5);
+}
+.content .message .ifo .do .buy{
+    height: 50px;
+    width: 80px;
+    border: 1px solid;
+    border-radius: 30px;
+    line-height: 50px;
+    background: rgb(51, 2, 2);
+    color: white;
+    float: right;
+    text-align: center; 
+}
+/* buy */
+
+
+
+

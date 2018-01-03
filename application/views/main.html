@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<!-- 加载css文件方法 -->
+    <link rel="stylesheet" href="<?php echo base_url('style/main.css') ?>">
+
+<body>
+    <div class="head">
+        <ul>
+            <li><a href="<?php echo site_url('Main/index/1') ?>">床</a></li>
+            <li><a href="<?php echo site_url('Main/index/2') ?>">衣柜</a></li>
+            <li><a href="<?php echo site_url('Main/index/3') ?>">冰箱</a></li>
+            <li><a href="<?php echo site_url('Main/index/4') ?>">桌子</a></li>
+            <li><a href="<?php echo site_url('Main/index/5') ?>">椅子</a></li>
+            <li><a href="<?php echo site_url('Main/index/6') ?>">洗衣机</a></li>
+        </ul>
+    </div>
+    
+    <div class="handle">
+        <div class="cart"><a href="<?php echo site_url('Selfmsg/self') ?>"><?php echo $this->session->userdata['name']; ?></a></div>
+        <div class="logout">
+            <a href="<?php echo site_url('Login/logout'); ?>">注销</a>
+        </div>
+    </div>
+    <div class="content">
+        <?php foreach($goods as $good): ?> 
+         <div class="test">
+             <!-- 图片 -->
+            <div class="pic">                       
+                <img src="<?php echo base_url().'uploads/'.$good['photo'] ?>" alt="图片找不到了！" height="250px"  width="300">
+            </div>
+            <div class="message">
+                <!-- 标题 和描述 -->
+                <div class="title">
+                    <h4 style="padding-left:10px"><?php echo $good['goodsName'];echo "<hr>"?></h4>
+                    <p style="color:black;padding:7px;font-size:14px;"><?php echo $good['desc'] ?></p>
+                    <div class="kucun">
+                        <?php echo '库存:'.$good['number'] ?>  
+                    </div>
+                </div>
+                <div class="ifo">
+                    <!-- 价格 -->
+                    <div class="price">￥<?php echo $good['price'] ?></div>
+                    <!-- 买 -->
+                    <div class="do">
+                        <a href="<?php echo site_url('Buy/confirm').'/'.$good['goodid'].'/'.$good['price']; ?>">
+                            <div class="buy">BUY</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <?php endforeach; ?>
+    </div>
+    
+    <div class="foot"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<script>
+	winows.onload=function(){
+		y=document.getElementById("yangzheng");
+		y.src="<?php echo $image ?>;"
+	}
+</script>
+<body>
+	<form action="<?php echo site_url('Login/signin') ?>" name="login" method="post">
+		Name: <input type="text" name="name"><br>
+		Password: <input type="password" name="password"><br>
+<!-- 		<img src="<?php echo site_url('resources/captcha/').$time.'jpg' ?>" alt=""> -->
+		验证码：<input type="text" name="captcha">
+		<?php echo $image ?>
+		<br>
+
+		<input type="submit" name="submit" value="submit">
+
+	</form>
+	<form action="<?php echo site_url('Register/index') ?>" name="register" method="post">
+				<input type="submit" name="submit" value="register">
+	</form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Confirm</title>
+    <script>    
+        function add(){
+            var $total=document.getElementById('total');
+            var $price=document.getElementById('price');
+            var $number=document.getElementById('number');
+            console.log(parseInt($total.value));
+
+            
+        }
+    </script>
+</head>
+<!-- <link rel="stylesheet" href="<?php echo base_url('style/main.css') ?>"> -->
+<body>
+    <h1 style="text-align:center;color:brown; margin-top:10px">确认订单</h1>
+<form action="<?php echo site_url('Buy/buy') ?>" method="post" name="confirm">
+    <table border="1px solid">
+        <tr>
+            <th>商品名</th>
+            <th>单价</th>
+            <th>购买数量</th>
+            <th>总价</th>
+        </tr>
+        <tr>
+            <td><?php echo $goodsname;  ?></td>
+            <td id="price"><?php  echo $price ?></td>
+            <td >  
+                <!-- 无法增加 -->
+                <input type="text" name="number" value=1 >
+            </td>  
+            <!-- total  -->
+            <td id="total"><?php   echo $price; ?> </td>
+            <!-- id -->
+            <!-- goodid改为userid -->
+                <input type="hidden" name='goodsid' value="<?php echo $goodsid; ?>">    
+                <input type="hidden" name='total' value="<?php   echo $price; ?>">
+            <td><input type="submit" name="submit" value="确定"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

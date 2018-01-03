@@ -1,0 +1,7 @@
+先创建数据库
+数据库名：onlineshop
+导入onlineshop.sql
+
+浏览器访问方式：http://localhost/myshop/index.php/Login/login
+
+

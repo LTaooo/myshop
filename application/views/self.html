@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("<?php echo $msg ?>"); 
+    </script>
+    <table border="solid 1px">
+        <tr>
+            <th>订单编号</th>
+            <th>数量</th>
+            <th>购物时间</th>
+        </tr>
+        <?php foreach($a as $a1):
+            foreach($a1 as $a2):
+        ?>
+            
+        <tr>
+            <td><?php echo $a2['orderid']; ?></td>
+            <td><?php echo $a2['goodscount'] ?></td>
+            <td><?php echo $a2['shoppingdate'] ?></td>
+        </tr>
+        <?php
+        endforeach;
+        endforeach;
+        ?>
+    </table>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>manage</title>
+</head>
+<body>
+	添加商品类别：
+	<form action="<?php echo site_url('Manager/addsort') ?>" name='add' method="post">
+		<input type="text" name="sort">
+		<input type="submit" value='添加' name="submit">
+	</form>
+	<br>
+	<hr><br> 
+	添加商品信息： <br>
+	<?php echo $error;?>
+	<?php echo form_open_multipart('Manager/addgoods'); ?>
+		Category:<label> <input type="radio" name="category" value="1" >床</label>
+				 <label><input type="radio" name="category" value="2">衣柜</label>
+				 <label><input type="radio" name="category" value="3">冰箱</label>
+				 <label><input type="radio" name="category" value="4">桌子</label>
+				 <label><input type="radio" name="category" value="5">椅子</label>
+				 <label><input type="radio" name="category" value="6">洗衣机</label><br>
+		GoodsName:<input type="text" name="goodsname"><br>
+		price:<input type="text" name="price"><br>
+		photo:<input type="file" name="photo"><br>
+		desc: <textarea name="desc"></textarea><br>
+		number<input type="text" name="number"><br>
+		<input type="submit" value='添加' name="submit">
+
+	</form>
+	<br><br>
+	<a href="<?php echo site_url('Login/logout'); ?>">注销</a>
+	<hr>
+</body>
+</html>
